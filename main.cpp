@@ -6,10 +6,27 @@ using namespace std;
 
 class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    int lengthOfLongestSubstring(string s) {
+        int max =0;
+        int k = 0;
+        for(int i=0;i<s.size();i++){
+            for(int j = k;j<i;j++){
+                if(s[i]==s[j]){
+                    k=j+1;
+                    break;
+                }
+            }
+            if(i-k+1>max){
+                max = i-k+1;
+            }
+        }
+        return max;
     }
 };
 
 int main() {
+    string s = "aab";
+    Solution test;
+    cout<<test.lengthOfLongestSubstring(s);
     return 0;
 }

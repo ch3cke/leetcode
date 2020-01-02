@@ -1,2 +1,2 @@
 ## LEETCODE
-this is a simple project to store my code
+this is a project for my leetcode train

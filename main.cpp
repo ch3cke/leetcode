@@ -1,6 +1,7 @@
 #include <vector>
 #include <math.h>
 #include <iostream>
+#include <stack>
 using namespace std;
 
 class Solution {
@@ -102,11 +103,40 @@ public:
         }
         return s;
     }
+    bool isValid(string s) {
+        stack<char> tool;
+        for(int i = 0;i<s.size();i++){
+            if(tool.empty()){
+                tool.push(s[i]);
+            } else if(check(tool.top(),s[i])){
+                tool.pop();
+            } else{
+                tool.push(s[i]);
+            }
+        }
+        if(tool.empty()){
+            return true;
+        } else{
+            return false;
+        }
+    }
+    bool check(char s1,char s2){
+        if((s1=='{' && s2=='}')||(s2=='{' && s1=='}')){
+            return true;
+        } else if((s1=='(' && s2==')')||(s2=='(' && s1==')')){
+            return true;
+        } else if((s1=='[' && s2==']')||(s2=='['&& s1==']')){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 };
 
 int main() {
-    string x = "-000000000000001";
+    string x = "(]{}";
     Solution test;
-    cout<<test.myAtoi(x);
+    cout<<test.isValid(x);
     return 0;
 }

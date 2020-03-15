@@ -2,141 +2,49 @@
 #include <math.h>
 #include <iostream>
 #include <stack>
+#include <stdio.h>
+
 using namespace std;
+
+struct ListNode {
+       int val;
+       ListNode *next;
+       ListNode(int x) : val(x), next(NULL) {}
+     };
 
 class Solution {
 public:
-    string intToRoman(int num) {
-        string result = "";
-        while (num>0){
-            if(num>=1000){
-                result.push_back('M');
-                num = num - 1000;
-            } else if(num >= 900){
-                result.push_back('C');
-                result.push_back('M');
-                num = num -900;
-            } else if(num>=500){
-                result.push_back('D');
-                num = num-500;
-            } else if(num>=400){
-                result.push_back('C');
-                result.push_back('D');
-                num = num -400;
-            } else if(num>=100){
-                result.push_back('C');
-                num = num-100;
-            } else if(num>=90){
-                result.push_back('X');
-                result.push_back('C');
-                num = num -90;
-            } else if(num>= 50){
-                result.push_back('L');
-                num = num-50;
-            } else if(num>= 40){
-                result.push_back('X');
-                result.push_back('L');
-                num = num-40;
-            } else if(num>= 10){
-                result.push_back('X');
-                num = num-10;
-            } else if(num== 9){
-                result.push_back('I');
-                result.push_back('X');
-                num = num-9;
-            }else if(num>= 5){
-                result.push_back('V');
-                num = num-5;
-            }else if(num== 4){
-                result.push_back('I');
-                result.push_back('V');
-                num = num-4;
-            } else if(num>0){
-                result.push_back('I');
-                num = num-1;
-            }
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* Remove = head->next;
+        ListNode* First = head;
+        ListNode* End = head;
+        while(n>0){
+            n = n-1;
+            End = End->next;
         }
-        return result;
+        while(End->next!=NULL){
+            First=First->next;
+            Remove = Remove->next;
+            End = End->next;
+        }
+        First->next=Remove->next;
+        return Remove;
     }
-    int myAtoi(string str) {
-        string result = "";
-        if(str.size()==0){
-            return 0;
-        }
-        int flag = 1;
-        for(int i=0;i<str.size();i++) {
-            if(str[i]==' ' && result.size()==0){
-                continue;
-            } else {
-                if(result.size()==0 && str[i]=='0'){
-                    result.push_back(str[i]);
-                } else if((result[0]=='-'||result[0]=='+')&&str[i]=='0'&&result.size()==1){
-                    result.push_back(str[i]);
-                } else{
-                    if ((str[i] - '0') < 10 && (str[i] - '0') >= 0) {
-                        result.push_back(str[i]);
-                    } else if (result.size() == 0 && (str[i] == '-' || str[i]=='+')) {
-                        result.push_back(str[i]);
-                    } else if (result.size() != 0) {
-                        break;
-                    } else if (result.size() == 0 && !(((str[i] - '0') < 10) && ((str[i] - '0') > 0))) {
-                        return 0;
-                    }
-                }
-            }
-        }
-        int s = 0;
-        if((result[0]=='-' || result[0]=='+')&&result.size()==1){
-            return 0;
-        }
-        if(result.size()==0){
-            return 0;
-        }
-        try {
-            s = stoi(result);
-        }catch(exception e) {
-            if(result[0]=='-'){
-                s = INT_MIN;
-            } else{
-                s=INT_MAX;
-            }
-        }
-        return s;
-    }
-    bool isValid(string s) {
-        stack<char> tool;
-        for(int i = 0;i<s.size();i++){
-            if(tool.empty()){
-                tool.push(s[i]);
-            } else if(check(tool.top(),s[i])){
-                tool.pop();
-            } else{
-                tool.push(s[i]);
-            }
-        }
-        if(tool.empty()){
-            return true;
-        } else{
-            return false;
-        }
-    }
-    bool check(char s1,char s2){
-        if((s1=='{' && s2=='}')||(s2=='{' && s1=='}')){
-            return true;
-        } else if((s1=='(' && s2==')')||(s2=='(' && s1==')')){
-            return true;
-        } else if((s1=='[' && s2==']')||(s2=='['&& s1==']')){
-            return true;
-        } else {
-            return false;
-        }
-    }
-
 };
 
 int main() {
-    string x = "(]{}";
-    Solution test;
-    cout<<test.isValid(x);
-    return 0;
+    int num = 10;
+    ListNode* s;
+    ListNode q;
+    s->val=10;
+    ListNode* success = s;
+    while(num>0){
+        num--;
+        q->val=num;
+        s->next = q;
+        s = s->next;
+    }
+
+    Solution sou ;
+    cout<<sou.removeNthFromEnd(success,2)->val;
 }

@@ -6,45 +6,35 @@
 
 using namespace std;
 
-struct ListNode {
-       int val;
-       ListNode *next;
-       ListNode(int x) : val(x), next(NULL) {}
-     };
-
 class Solution {
 public:
-    ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode* Remove = head->next;
-        ListNode* First = head;
-        ListNode* End = head;
-        while(n>0){
-            n = n-1;
-            End = End->next;
+    int removeDuplicates(vector<int>& nums) {
+        vector<int>::iterator it = nums.begin();
+        int num = 0;
+        if(nums.size()==0){
+            return 0;
         }
-        while(End->next!=NULL){
-            First=First->next;
-            Remove = Remove->next;
-            End = End->next;
+        if(nums.size()==1){
+            return 1;
         }
-        First->next=Remove->next;
-        return Remove;
+        while(it<nums.end()){
+            if(*it != *(it+1)){
+                num = num+1;
+            } else{
+                it = nums.erase(it);
+                continue;
+            }
+            it++;
+        }
+        return num;
     }
 };
 
 int main() {
-    int num = 10;
-    ListNode* s;
-    ListNode q;
-    s->val=10;
-    ListNode* success = s;
-    while(num>0){
-        num--;
-        q->val=num;
-        s->next = q;
-        s = s->next;
-    }
-
-    Solution sou ;
-    cout<<sou.removeNthFromEnd(success,2)->val;
+    vector<int> test;
+    test.push_back(1);
+    test.push_back(2);
+    Solution s;
+    cout<<s.removeDuplicates(test);
+    cout<<"sss"<<endl;
 }

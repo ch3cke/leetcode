@@ -1,6 +1,6 @@
-#include <iostream>
-#include <vector>
-using namespace std;
+//
+// Created by ch3ck on 2020/11/5.
+//
 
 class Solution {
 public:
@@ -32,18 +32,3 @@ public:
         }
     }
 };
-int main(int argc, char** argv){
-    Solution s;
-    vector<int> height;
-    height.push_back(2);
-    height.push_back(3);
-    height.push_back(4);
-    height.push_back(5);
-    height.push_back(18);
-    height.push_back(17);
-    height.push_back(6);
-//    height.push_back(3);
-//    height.push_back(7);
-    printf("%d",s.maxArea(height));
-    return 0;
-}

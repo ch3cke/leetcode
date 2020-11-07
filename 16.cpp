@@ -1,8 +1,29 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
+//给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和
+//。假定每组输入只存在唯一答案。
+//
+//
+//
+// 示例：
+//
+// 输入：nums = [-1,2,1,-4], target = 1
+//输出：2
+//解释：与 target 最接近的和是 2 (-1 + 2 + 1 = 2) 。
+//
+//
+//
+//
+// 提示：
+//
+//
+// 3 <= nums.length <= 10^3
+// -10^3 <= nums[i] <= 10^3
+// -10^4 <= target <= 10^4
+//
+// Related Topics 数组 双指针
+// 👍 622 👎 0
 
+
+//leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 public:
     int threeSumClosest(vector<int>& nums, int target) {
@@ -17,10 +38,6 @@ public:
             third = nums.size()-1;
             second = first+1;
             while (third!=second&& second<nums.size()){
-                if(sum>target&&nums[third]==nums[third-1]){
-                    third=third-1;
-                    continue;
-                }
                 sum = nums[first]+nums[second]+nums[third];
                 iv  = (sum-target)*(sum-target);
                 if(iv<tmp){
@@ -37,30 +54,4 @@ public:
         return result;
     }
 };
-
-void showVector(vector<int> num){
-    for(int i  = 0; i < num.size();i++){
-        cout<<num[i]<<"\t";
-    }
-}
-
-void showVectors(vector<vector<int>> nums){
-    for(int i  = 0; i < nums.size();i++){
-        showVector(nums[i]);
-    }
-}
-
-int main(int argc, char** argv){
-    Solution s;
-    vector<int> info;
-    vector<vector<int>> result;
-    // [-1,2,1,-4]
-//    info.push_back(1);
-//    info.push_back(-1);
-    info.push_back(-1);
-    info.push_back(2);
-    info.push_back(1);
-    info.push_back(-4);
-    cout<<s.threeSumClosest(info,1);
-    return 0;
-}
+//leetcode submit region end(Prohibit modification and deletion)

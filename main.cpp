@@ -1,44 +1,65 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 class Solution {
 public:
-    string longestCommonPrefix(vector<string>& strs) {
-        if(strs.size()==0){
-            return "";
-        } else if (strs.size()==1){
-            return strs[0];
-        } else{
-            int i = 0;
-            string tmpStr = "";
-            tmpStr = getString(strs[0],strs[1]);
-            for(i = 2;i<strs.size();i++){
-                tmpStr = getString(tmpStr,strs[i]);
+    vector<vector<int>> threeSum(vector<int>& nums) {
+        vector<vector<int>> result;
+        if(nums.size()>2){
+            sort(nums.begin(), nums.end());
+            int flag = 0;
+            int begin = 0;
+            while(nums[begin]<=0&&begin<nums.size()-1){
+                if(begin>0&&nums[begin]==nums[begin-1]){
+                    begin+=1;
+                    continue;
+                }
+                int ends = nums.size()-1;
+                int index = begin+1;
+                while (index<ends){
+                    if(nums[index]+nums[ends]+nums[begin]==0){
+                        result.push_back({nums[begin],nums[index],nums[ends]});
+                        index +=1;
+                    } else if(nums[index]+nums[ends]+nums[begin]>0){
+                        ends = ends -1;
+                    } else if (nums[index]+nums[ends]+nums[begin]<0){
+                        index = index +1;
+                    }
+                }
+                begin+=1;
             }
-            return tmpStr;
         }
-    }
-    string getString(string s1, string s2){
-        string resultStr = "";
-        int i = 0;
-        if(s1.size()==0||s2.size()==0){
-            return "";
-        }
-        while (s1[i] == s2[i]){
-            resultStr.push_back(s1[i]);
-            i++;
-            if(i>(s1.length()-1)||i>(s2.length()-1)) break;
-        }
-        return resultStr;
+        result.erase(unique(result.begin(), result.end()), result.end());
+        return result;
     }
 };
+
+void showVector(vector<int> num){
+    for(int i  = 0; i < num.size();i++){
+        cout<<num[i]<<"\t";
+    }
+}
+
+void showVectors(vector<vector<int>> nums){
+    for(int i  = 0; i < nums.size();i++){
+        showVector(nums[i]);
+    }
+}
+
 int main(int argc, char** argv){
     Solution s;
-    vector<string> info;
-    info.push_back("");
-    info.push_back("");
-    info.push_back("hack");
-    cout<<s.longestCommonPrefix(info)<<endl;
+    vector<int> info;
+    vector<vector<int>> result;
+    //[-1, 0, 1, 2, -1, -4]
+//    info.push_back(1);
+//    info.push_back(-1);
+//    info.push_back(0);
+    info.push_back(0);
+    info.push_back(0);
+    info.push_back(0);
+    result = s.threeSum(info);
+    showVectors(result);
     return 0;
 }

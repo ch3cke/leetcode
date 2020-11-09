@@ -1,0 +1,4 @@
+"D:\CLion 2018.2.6\CLion 2018.2.7\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\ch3ck\Desktop\leetcode
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/ch3ck/Desktop/leetcode/cmake-build-debug

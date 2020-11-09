@@ -9,6 +9,12 @@ type ListNode struct {
 	Next *ListNode
 }
 
+func swap(l1 *ListNode, l2 *ListNode) {
+	tmp := l1.Val
+	l2.Val = tmp
+	l1.Val = tmp
+}
+
 func initList(l *ListNode, table []int) {
 	l2 := l
 	l2.Val = table[0]
@@ -29,10 +35,7 @@ func main() {
 	//[-10,-10,-9,-4,1,6,6]
 	//[-7]
 	l := &ListNode{}
-	l2 := []int{-10, -10, -9, -4, 1, 6, 6}
-	l3 := &ListNode{}
-	l4 := []int{-7}
-	initList(l, l2)
-	initList(l3, l4)
-	showList(mergeTwoLists(l, l3))
+	// l2 := []int{1,2,3,4}
+	// initList(l, l2)
+	showList(swapPairs(l))
 }

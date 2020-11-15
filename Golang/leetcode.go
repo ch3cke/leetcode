@@ -16,7 +16,6 @@ func showList(l *ListNode) {
 }
 
 func main() {
-	i := []int{3, 2, 1}
-	nextPermutation(i)
-	fmt.Println(i)
+	i := []int{5, 7, 7, 8, 8, 10}
+	fmt.Println(searchRange(i, 8))
 }

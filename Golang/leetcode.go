@@ -16,6 +16,5 @@ func showList(l *ListNode) {
 }
 
 func main() {
-	i := []int{5, 7, 7, 8, 8, 10}
-	fmt.Println(searchRange(i, 8))
+	fmt.Println('5' % '1')
 }

@@ -16,5 +16,6 @@ func showList(l *ListNode) {
 }
 
 func main() {
-	fmt.Println('5' % '1')
+	can := []int{2, 3, 6, 7}
+	fmt.Println(combinationSum(can, 7))
 }

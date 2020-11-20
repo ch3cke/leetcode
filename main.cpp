@@ -65,11 +65,8 @@ void showVectors(vector<vector<int>> nums){
 }
 
 int main(int argc, char** argv){
-    Solution s;
-    // 给定数组 nums = [1, 0, -1, 0, -2, 2]，和 target = 0。
-    //[-2,-1,-1,1,1,2,2]
-    //0
-    vector<int> test = {-2,-1,-1,1,1,2,2};
-    showVectors(s.four(test, 0));
-    return 0;
+    srand(0x1548u);
+    for(int i = 0; i <=9; i++){
+        cout<<rand()%127<<endl;
+    }
 }

@@ -42,7 +42,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7398bb-cfd8-4b75-a03b-740609bd846e" name="Default Changelist" comment="" />
+    <list default="true" id="2f7398bb-cfd8-4b75-a03b-740609bd846e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,14 +74,14 @@
     <session id="-239218961">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.21" value="2" />
           <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.23" value="2" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.29" value="1" />
@@ -87,7 +89,7 @@
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.49" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -100,7 +102,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="5613" />
+          <entry key="ObjectiveC" value="5675" />
           <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
@@ -111,8 +113,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="636">
+              <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -159,12 +161,12 @@
         <option value="$PROJECT_DIR$/16.cpp" />
         <option value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[17]电话号码的字母组合.cpp" />
         <option value="$PROJECT_DIR$/17.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[18]四数之和.cpp" />
         <option value="$PROJECT_DIR$/18.cpp" />
         <option value="$PROJECT_DIR$/JAVA/5.java" />
         <option value="$PROJECT_DIR$/Python/6.py" />
         <option value="$PROJECT_DIR$/Python/7.py" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -175,7 +177,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
+    <option name="x" value="2017" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
     <option name="height" value="754" />
@@ -206,6 +208,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="NBKnowledgePane" />
       <pane id="ProjectPane">
         <subPane>
@@ -218,7 +221,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,7 +254,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Build All">
+  <component name="RunManager" selected="Application.leetcode">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -328,6 +330,7 @@
       <workItem from="1604812069988" duration="8413000" />
       <workItem from="1604820751077" duration="1088000" />
       <workItem from="1604821974560" duration="114000" />
+      <workItem from="1605590414918" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="change">
       <created>1577811965690</created>
@@ -487,7 +490,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40328000" />
+    <option name="totallyTimeSpent" value="40955000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -499,21 +502,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="1358" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28463286" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20373334" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.24981076" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49735048" weight="0.49669966" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49735048" weight="0.3278867" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49973333" weight="0.35947713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TeamCity" order="8" weight="0.32838285" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49706668" weight="0.3278867" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49706668" weight="0.32673267" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.59348977" side_tool="true" weight="0.49669966" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32838285" />
@@ -782,8 +785,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="636">
+          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
         </state>
       </provider>
     </entry>

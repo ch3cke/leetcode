@@ -16,6 +16,5 @@ func showList(l *ListNode) {
 }
 
 func main() {
-	can := []int{2, 3, 6, 7}
-	fmt.Println(combinationSum(can, 7))
+	fmt.Println(multiply("401716832807512840963", "167141802233061013023557397451289113296441069"))
 }

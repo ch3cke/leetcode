@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"reflect"
+	"sort"
 )
 
 type ListNode struct {
@@ -15,5 +17,6 @@ func showList(l *ListNode) {
 	}
 }
 func main() {
-	fmt.Println(multiply("401716832807512840963", "167141802233061013023557397451289113296441069"))
+	fmt.Println(permute([]int{0, -1, 1, 1}))
+	fmt.Println(reflect.DeepEqual([]int{1, 2, 3}, []int{1, 2, 3}))
 }

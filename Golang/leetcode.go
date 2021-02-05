@@ -16,5 +16,6 @@ func showList(l *ListNode) {
 }
 
 func main() {
-	fmt.Println("sasas")
+	nums := [][]int{{1, 4}, {0, 2}, {3, 5}}
+	fmt.Println(merge(nums))
 }

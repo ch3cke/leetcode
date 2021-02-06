@@ -16,6 +16,5 @@ func showList(l *ListNode) {
 }
 
 func main() {
-	nums := [][]int{{1, 4}, {0, 2}, {3, 5}}
-	fmt.Println(merge(nums))
+	fmt.Println(getPermutation(3, 3))
 }

@@ -1,7 +1,8 @@
 package main
 
-func merge(intervals [][]int) [][]int {
-	sort_2(intervals)
+func insert(intervals [][]int, newInterval []int) [][]int {
+	intervals = append(intervals, newInterval)
+	sort_1(intervals)
 	for i := 0; i < len(intervals)-1; {
 		if intervals[i][1] >= intervals[i+1][0] {
 			if intervals[i][1] < intervals[i+1][1] {
@@ -15,7 +16,7 @@ func merge(intervals [][]int) [][]int {
 	return intervals
 }
 
-func sort_2(intervals [][]int) {
+func sort_1(intervals [][]int) {
 	for i := 0; i < len(intervals); i++ {
 		for j := i; j < len(intervals); j++ {
 			if intervals[i][0] > intervals[j][0] {

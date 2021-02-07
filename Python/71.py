@@ -1,8 +1,8 @@
 # @project : Python
 # @author  : ch3ck
-# @file   : test.py
+# @file   : 71.py
 # @ide    : PyCharm
-# @time   : 2020-11-08 16:10:00
+# @time   : 2021-02-08 00:46:14
 # @contact: ch3cke@gmail.com
 class Solution(object):
     def simplifyPath(self, path):
@@ -32,7 +32,3 @@ class Solution(object):
             return result[:-1]
         else:
             return result
-
-if __name__ == '__main__':
-    s = Solution()
-    print s.simplifyPath('/../')

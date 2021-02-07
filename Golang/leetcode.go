@@ -15,6 +15,23 @@ func showList(l *ListNode) {
 	}
 }
 
+func init_List(nums []int) *ListNode {
+	result := &ListNode{}
+	index := result
+	index.Val = nums[0]
+	for i := 1; i < len(nums); i++ {
+		tmp := &ListNode{
+			Val:  nums[i],
+			Next: nil,
+		}
+		index.Next = tmp
+		index = tmp
+	}
+	index.Next = nil
+	return result
+}
+
 func main() {
-	fmt.Println(getPermutation(3, 3))
+	nums_list := init_List([]int{0, 1, 2})
+	showList(rotateRight(nums_list, 4))
 }

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 type ListNode struct {
@@ -13,6 +14,10 @@ func showList(l *ListNode) {
 	for l2 := l; l2 != nil; l2 = l2.Next {
 		fmt.Println(l2.Val, "\t")
 	}
+}
+
+func addBinary(a string, b string) string {
+
 }
 
 func init_List(nums []int) *ListNode {
@@ -32,6 +37,5 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	nums_list := init_List([]int{0, 1, 2})
-	showList(rotateRight(nums_list, 4))
+	fmt.Println(strconv.Atoi("0b1010"))
 }

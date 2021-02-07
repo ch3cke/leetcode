@@ -16,10 +16,6 @@ func showList(l *ListNode) {
 	}
 }
 
-func addBinary(a string, b string) string {
-
-}
-
 func init_List(nums []int) *ListNode {
 	result := &ListNode{}
 	index := result

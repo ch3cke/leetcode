@@ -32,5 +32,5 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	fmt.Println(combine(4, 2))
+	fmt.Println(subsets([]int{1, 2, 3}))
 }

@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 type ListNode struct {
@@ -33,5 +32,5 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	fmt.Println(strconv.Atoi("0b1010"))
+	fmt.Println(combine(4, 2))
 }

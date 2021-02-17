@@ -32,10 +32,6 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	nums := [][]byte{
-		{'A', 'B', 'C', 'E'},
-		{'S', 'F', 'C', 'S'},
-		{'A', 'D', 'E', 'E'},
-	}
-	fmt.Println(exist(nums, "ABCB"))
+	s := []int{1, 2, 3, 0, 0, 0}
+	fmt.Println(s)
 }

@@ -32,5 +32,8 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	fmt.Println(subsetsWithDup([]int{4, 4, 4, 1, 4}))
+	fmt.Println(transpose([][]int{
+		{1, 2, 3},
+		{4, 5, 6},
+	}))
 }

@@ -9,12 +9,17 @@ type ListNode struct {
 	Next *ListNode
 }
 
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
 func showList(l *ListNode) {
 	for l2 := l; l2 != nil; l2 = l2.Next {
 		fmt.Println(l2.Val, "\t")
 	}
 }
-
 func init_List(nums []int) *ListNode {
 	result := &ListNode{}
 	index := result
@@ -32,8 +37,11 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	fmt.Println(transpose([][]int{
-		{1, 2, 3},
-		{4, 5, 6},
-	}))
+	//nums :=[][]int{
+	//	{5,4},
+	//	{6,4},
+	//	{6,7},
+	//	{2,3},
+	//}
+	fmt.Println(isInterleave("aabcc", "dbbca", "aadbbbaccc"))
 }

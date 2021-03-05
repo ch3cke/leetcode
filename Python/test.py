@@ -5,34 +5,20 @@
 # @time   : 2020-11-08 16:10:00
 # @contact: ch3cke@gmail.com
 class Solution(object):
-    def simplifyPath(self, path):
+    def isInterleave(self, s1, s2, s3):
         """
-        :type path: str
-        :rtype: str
+        :type s1: str
+        :type s2: str
+        :type s3: str
+        :rtype: bool
         """
-        tmp = path.split('/')
-        for i in range(len(tmp)):
-            tmp[i] += '/'
-        result_tmp = []
-        result_tmp.append(tmp[0])
-        for i in range(1,len(tmp)):
-            if tmp[i]=='../':
-                if len(result_tmp)>1:
-                    result_tmp.pop()
-            elif tmp[i] == '/':
-                continue
-            elif tmp[i] == './':
-                continue
-            else:
-                result_tmp.append(tmp[i])
-        result = ''
-        for i in result_tmp:
-            result += i
-        if result[-1]=='/' and len(result)>1:
-            return result[:-1]
-        else:
-            return result
+        tmp = ''
+        for i in s1:
+            for j in s3:
+                if i == j:
+                    break
+        print s3
 
 if __name__ == '__main__':
     s = Solution()
-    print s.simplifyPath('/../')
+    print s.isInterleave("aabcc","dbbca","aadbbcbcac")

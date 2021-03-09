@@ -43,5 +43,7 @@ func main() {
 	//	{6,7},
 	//	{2,3},
 	//}
-	fmt.Println(isInterleave("aabcc", "dbbca", "aadbbbaccc"))
+	s := "abcdefg"
+	fmt.Println(s[:len(s)-1])
+	fmt.Println(removeDuplicates_1("aaaaa"))
 }

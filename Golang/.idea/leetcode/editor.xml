@@ -35,11 +35,35 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[1047]删除字符串中的所有相邻重复项.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[1047]删除字符串中的所有相邻重复项.go" />
+              <option name="questionId" value="1128" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[104]二叉树的最大深度.go">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[104]二叉树的最大深度.go" />
               <option name="questionId" value="104" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[105]从前序与中序遍历序列构造二叉树.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[105]从前序与中序遍历序列构造二叉树.go" />
+              <option name="questionId" value="105" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[131]分割回文串.go">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$USER_HOME$/AppData/Local/Temp/leetcode/editor/cn/[131]分割回文串.go" />
+              <option name="questionId" value="131" />
             </LeetcodeEditor>
           </value>
         </entry>

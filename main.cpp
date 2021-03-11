@@ -1,15 +1,48 @@
-#include<stdio.h>
+#include <iostream>
+#include <string>
+#include <stack>
 
-struct Test{
-    char Test[13];
-    int a = 64;
-};
+using namespace std;
+
+
+int calculate(string s){
+    stack<int> ops;
+    ops.push(1);
+    int sign=1;
+
+    int ret = 0;
+    int n = s.length();
+    int i=0;
+    while (i<n){
+        if(s[i]==' '){
+            i++;
+        } else if (s[i]=='+'){
+            sign = ops.top();
+            i++;
+        } else if (s[i]=='-'){
+            sign = -ops.top();
+            i++;
+        } else if (s[i]=='('){
+            ops.push(sign);
+            i++;
+        } else if (s[i]==')'){
+            ops.pop();
+            i++;
+        } else{
+            long num = 0;
+            while (i<n&&s[i]>='0'&&s[i]<='9'){
+                num=num*10+s[i]-'0';
+                i++;
+            }
+            ret += sign*num;
+        }
+    }
+    return ret;
+}
+
+
 
 int main(){
-    Test s;
-    s.Test[0] = '0';
-    s.Test[2] = '1';
-    s.Test[12] = 'c';
-    printf("%c", s.a);
-    return 0;
+    string s2 = "(1+(4+5+2)-3)+(6+8)";
+    cout<<calculate(s2);
 }

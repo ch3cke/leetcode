@@ -1,9 +1,10 @@
 # @project : Python
 # @author  : ch3ck
-# @file   : test.py
+# @file   : 227.py
 # @ide    : PyCharm
-# @time   : 2020-11-08 16:10:00
+# @time   : 2021-03-12 17:26:34
 # @contact: ch3cke@gmail.com
+
 class Solution(object):
     def calculate(self, s):
         """
@@ -71,8 +72,3 @@ class Solution(object):
         else:
             return False
 
-
-
-if __name__ == '__main__':
-    s = Solution()
-    print s.calculate(" 1+1+1 ")

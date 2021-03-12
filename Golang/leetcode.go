@@ -36,34 +36,6 @@ func init_List(nums []int) *ListNode {
 	return result
 }
 
-func calculate_1(s string) int {
-	ops := []string{}
-	nums := []int{}
-	sign := ""
-	for i := 0; i < len(s); i++ {
-		if s[i] == ' ' {
-			continue
-		}
-		if s[i] >= '0' && s[i] <= '9' {
-			tmp := 0
-			for {
-				if s[i] < '0' || s[i] > '9' {
-					nums = append(nums, tmp)
-					break
-				}
-				tmp = tmp*10 + int(s[i]-'0')
-				i = i + 1
-			}
-		} else {
-			if s[i] == '*' || s[i] == '/' {
-				ops = append(ops, string(s[i]))
-			} else {
-
-			}
-		}
-	}
-}
-
 func main() {
 	//nums :=[][]int{
 	//	{5,4},

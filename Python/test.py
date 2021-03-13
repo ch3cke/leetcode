@@ -71,8 +71,29 @@ class Solution(object):
         else:
             return False
 
-
+    def isValidSerialization(self, preorder):
+        """
+        :type preorder: str
+        :rtype: bool
+        """
+        tmp=[]
+        preorder = preorder.split(',')
+        i = len(preorder)-1
+        if preorder[i]!='#':
+            return False
+        while i>=0:
+            if preorder[i]=='#':
+                tmp.append(preorder[i])
+            else:
+                tmp.pop()
+                if len(tmp)==0:
+                    return False
+            i-=1
+        if len(tmp)==1 and tmp[0]=='#':
+            return True
+        else:
+            return False
 
 if __name__ == '__main__':
     s = Solution()
-    print s.calculate(" 1+1+1 ")
+    print s.isValidSerialization("#,#,3,5,#")

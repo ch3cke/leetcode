@@ -37,11 +37,9 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	//nums :=[][]int{
-	//	{5,4},
-	//	{6,4},
-	//	{6,7},
-	//	{2,3},
-	//}
-	fmt.Println(calculate("1+1"))
+	fmt.Println("dddddddddd")
+	root := &TreeNode{Val: 1}
+	root.Left = &TreeNode{Val: 2}
+	root.Right = &TreeNode{Val: 3}
+	hasPathSum(root, 5)
 }

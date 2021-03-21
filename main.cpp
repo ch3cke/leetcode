@@ -43,6 +43,9 @@ int calculate(string s){
 
 
 int main(){
-    string s2 = "(1+(4+5+2)-3)+(6+8)";
-    cout<<calculate(s2);
+    uint8_t a, b,c;
+    c = 39;
+    a = c*32;
+    printf("%d\n",a);
+    return 0;
 }

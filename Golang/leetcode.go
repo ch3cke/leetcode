@@ -15,6 +15,13 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+type Node struct {
+	Val   int
+	Left  *Node
+	Right *Node
+	Next  *Node
+}
+
 func showList(l *ListNode) {
 	for l2 := l; l2 != nil; l2 = l2.Next {
 		fmt.Println(l2.Val, "\t")
@@ -37,9 +44,5 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	fmt.Println("dddddddddd")
-	root := &TreeNode{Val: 1}
-	root.Left = &TreeNode{Val: 2}
-	root.Right = &TreeNode{Val: 3}
-	hasPathSum(root, 5)
+	fmt.Println(evalRPN([]string{"4", "13", "5", "/", "+"}))
 }

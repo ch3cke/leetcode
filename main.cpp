@@ -1,51 +1,30 @@
 #include <iostream>
 #include <string>
 #include <stack>
+#include <vector>
 
 using namespace std;
 
-
-int calculate(string s){
-    stack<int> ops;
-    ops.push(1);
-    int sign=1;
-
-    int ret = 0;
-    int n = s.length();
-    int i=0;
-    while (i<n){
-        if(s[i]==' '){
-            i++;
-        } else if (s[i]=='+'){
-            sign = ops.top();
-            i++;
-        } else if (s[i]=='-'){
-            sign = -ops.top();
-            i++;
-        } else if (s[i]=='('){
-            ops.push(sign);
-            i++;
-        } else if (s[i]==')'){
-            ops.pop();
-            i++;
-        } else{
-            long num = 0;
-            while (i<n&&s[i]>='0'&&s[i]<='9'){
-                num=num*10+s[i]-'0';
-                i++;
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int money = 0;
+        int i=1;
+        while(i<prices.size()){
+            if(prices[i]-prices[i-1]>0){
+                money+= (prices[i]-prices[i-1]);
             }
-            ret += sign*num;
+            i+=1;
         }
+        return money;
     }
-    return ret;
-}
-
-
-
+};
 int main(){
-    uint8_t a, b,c;
-    c = 39;
-    a = c*32;
-    printf("%d\n",a);
-    return 0;
+    vector<int>nums;
+    nums.push_back(2);
+    nums.push_back(4);
+    nums.push_back(1);
+
+    Solution* s = new Solution();
+    cout<<s->maxProfit(nums);
 }

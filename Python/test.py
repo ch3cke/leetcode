@@ -94,6 +94,27 @@ class Solution(object):
         else:
             return False
 
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        s = ''.join(x for x in s if x.isalpha())
+        if s=='':
+            return True
+        if len(s)==1:
+            return False
+        q = len(s)-1
+        p = 0
+        while q > p:
+            if s[p].lower()!=s[q].lower():
+                return False
+            else:
+                p +=1
+                q -=1
+        return True
+
+
 if __name__ == '__main__':
     s = Solution()
-    print s.isValidSerialization("#,#,3,5,#")
+    print s.isPalindrome("0P")

@@ -15,11 +15,16 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+//type Node struct {
+//	Val   int
+//	Left  *Node
+//	Right *Node
+//	Next  *Node
+//}
+
 type Node struct {
-	Val   int
-	Left  *Node
-	Right *Node
-	Next  *Node
+	Val       int
+	Neighbors []*Node
 }
 
 func showList(l *ListNode) {
@@ -44,5 +49,5 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	fmt.Println(evalRPN([]string{"4", "13", "5", "/", "+"}))
+	fmt.Println(canCompleteCircuit([]int{2}, []int{2}))
 }

@@ -22,9 +22,15 @@ type TreeNode struct {
 //	Next  *Node
 //}
 
+//type Node struct {
+//	Val       int
+//	Neighbors []*Node
+//}
+
 type Node struct {
-	Val       int
-	Neighbors []*Node
+	Val    int
+	Next   *Node
+	Random *Node
 }
 
 func showList(l *ListNode) {
@@ -49,5 +55,5 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	fmt.Println(canCompleteCircuit([]int{2}, []int{2}))
+	fmt.Println(wordBreak("applepenapple", []string{"apple", "pen"}))
 }

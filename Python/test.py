@@ -114,7 +114,28 @@ class Solution(object):
                 q -=1
         return True
 
+    def reverseWords(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        s = s.strip()
+
+        tmp = s.split(' ')
+        result =""
+        i = len(tmp)-1
+        while i>=0:
+            if len(tmp[i])==0:
+                i-=1
+                continue
+            else:
+                result += tmp[i]
+                result += " "
+                i-=1
+        return result.strip()
+
+
 
 if __name__ == '__main__':
     s = Solution()
-    print s.isPalindrome("0P")
+    print s.reverseWords("  Bob    Loves  Alice   ")

@@ -55,5 +55,5 @@ func init_List(nums []int) *ListNode {
 }
 
 func main() {
-	fmt.Println(wordBreak("applepenapple", []string{"apple", "pen"}))
+	fmt.Println(numRabbits([]int{0, 0, 1, 1, 1}))
 }
